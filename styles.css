@@ -1,103 +1,102 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
+/* Apply a natural box layout model to all elements */
+*, *:before, *:after {
     box-sizing: border-box;
 }
 
+/* Remove default padding and margin */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
 body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    background-color: #fff;
-    line-height: 1.6;
-    padding-left: 300px; /* Space for sidebar */
+    line-height: 1;
+    font-family: Arial, sans-serif; /* Simple, clean font */
+    color: #333; /* Dark grey color for text */
+    background: #fff; /* White background */
+    max-width: 650px; /* Max width for content */
+    margin: 40px auto; /* Center the content and add some margin */
+    padding: 20px; /* Padding around the content */
 }
 
-/* Sidebar navigation styles */
-nav {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px; /* Adjust as needed */
-    height: 100%;
-    background: #f2f2f2; /* Light grey background */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+h1 {
+    font-size: 2em; /* Larger font size for the main title */
+    margin-bottom: 0.5em; /* Space after the title */
 }
 
-nav ul {
-    list-style: none;
-    padding: 20px 0;
-}
-
-nav ul li {
-    padding: 10px 0;
-}
-
-nav ul li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px; /* Smaller font size for the nav links */
-}
-
-/* Style for active page */
-nav ul li a.active {
-    color: #007bff; /* Bootstrap's primary color */
-}
-
-/* Main content styles */
-main {
-    max-width: 800px; /* Keeping the content within a max width */
-    margin: auto;
-}
-
-header h1 {
-    font-size: 36px; /* Large font size for the name */
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Paragraph styles */
 p {
-    margin-bottom: 20px;
-    font-size: 18px; /* Larger font size for readability */
+    margin-bottom: 1em; /* Space after paragraphs */
+    line-height: 1.6; /* More readable line spacing */
 }
 
-/* Link styles */
 a {
-    color: #007bff; /* Bootstrap's primary color for links */
-    text-decoration: none;
+    color: #0077cc; /* A blue color for links */
+    text-decoration: none; /* No underline on links */
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline on hover for links */
 }
 
-/* Footer styles */
+/* Style for the navigation links */
+nav ul {
+    list-style: none; /* No bullet points */
+    margin-bottom: 2em; /* Space after the nav */
+}
+
+nav ul li {
+    display: inline; /* Display links inline */
+    margin-right: 10px; /* Space between links */
+}
+
+/* Footer style */
 footer {
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
+    font-size: 0.8em; /* Smaller font size for footer */
+    text-align: center; /* Center align footer content */
+    margin-top: 2em; /* Space before the footer */
 }
 
-/* Add responsiveness */
-@media (max-width: 768px) {
-    body {
-        padding-left: 0;
-    }
+/* Style for section titles */
+h2 {
+    font-size: 1.5em; /* Slightly larger font size for section titles */
+    margin-bottom: 0.5em; /* Space after section titles */
+    margin-top: 1em; /* Space before section titles */
+    color: #333; /* Dark grey color for section titles */
+}
 
-    nav {
-        width: 100%;
-        height: auto;
-        padding: 10px;
-        position: relative;
-        box-shadow: none;
-    }
+/* Unstyled list for sections like 'Writing' */
+ul {
+    list-style: none; /* No bullet points for lists */
+    margin-bottom: 1em; /* Space after lists */
+}
 
-    main {
-        padding: 10px;
-    }
+ul li {
+    margin-bottom: 0.5em; /* Space between list items */
+}
+
+/* Minimalist email styling */
+.email {
+    font-style: italic; /* Italic style for email */
 }
