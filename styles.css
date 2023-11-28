@@ -1,63 +1,103 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, a {
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    list-style: none;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #fff;
+    line-height: 1.6;
+    padding-left: 300px; /* Space for sidebar */
+}
+
+/* Sidebar navigation styles */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px; /* Adjust as needed */
+    height: 100%;
+    background: #f2f2f2; /* Light grey background */
     padding: 20px;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
-    background: #555;
-    text-align: center;
-    padding: 10px 0;
+    list-style: none;
+    padding: 20px 0;
 }
 
 nav ul li {
-    display: inline;
+    padding: 10px 0;
 }
 
 nav ul li a {
-    color: #fff;
-    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px; /* Smaller font size for the nav links */
 }
 
+/* Style for active page */
+nav ul li a.active {
+    color: #007bff; /* Bootstrap's primary color */
+}
+
+/* Main content styles */
 main {
-    padding: 20px;
-    background: #fff;
-    margin-top: 20px;
+    max-width: 800px; /* Keeping the content within a max width */
+    margin: auto;
 }
 
+header h1 {
+    font-size: 36px; /* Large font size for the name */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 20px;
+    font-size: 18px; /* Larger font size for readability */
+}
+
+/* Link styles */
+a {
+    color: #007bff; /* Bootstrap's primary color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #333;
-    color: #fff;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    font-size: 14px;
 }
 
-/* Add a class for external links */
-.external-link::after {
-    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 18 18"><path fill="%23FFF" d="M0 0v18h18V0H0zm16 16H2V2h7v1H3v12h12V9h1v7z"/><path fill="%23FFF" d="M15 3v4h-1V4.41L9.41 9 8 7.59 13.59 2H12V1h4z"/></svg>');
-    padding-left: 4px;
+/* Add responsiveness */
+@media (max-width: 768px) {
+    body {
+        padding-left: 0;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        position: relative;
+        box-shadow: none;
+    }
+
+    main {
+        padding: 10px;
+    }
 }
