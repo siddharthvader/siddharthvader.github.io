@@ -96,6 +96,11 @@ ul li {
     margin-bottom: 0.5em; /* Space between list items */
 }
 
+a {
+    text-decoration: underline; /* Adds an underline to all links */
+}
+
+
 /* Minimalist email styling */
 .email {
     font-style: italic; /* Italic style for email */
