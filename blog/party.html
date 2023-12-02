@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog posts and musings written by Siddharth Ramakrishnan; SF, Columbia, Attentive">
+    <title>Siddharth Ramakrishnan - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Blog</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Party Timing: A Game Theoretic Approach</h3>
+
+            <p>August 26, 2022</p>
+
+            <p>There's the classic game theory example where you ask a group of people to try and guess a number that is 1/3 of the average number that the group chooses. This leads to people choosing low numbers since they know other people will choose low numbers to try and be 1/3 of the average. The equilibrium number here is 0 because if everyone thinks N steps ahead, it eventually leads to everyone choosing 0 to get the lowest number, which will be 1/3 of the average.</p>
+
+            <p>This made me think of a variation of this question, which is one where you actually have constraints on two sides instead of just one. (The above example has a constraint on the high end and pushes people down).</p>
+
+            <p>What if you were going to a party where you don't want to be the first person there (or in the first N people there), but you also don't want to be either more than 1 hour late or in the last x% of people there? This is a pretty real example where you don't want to be too early but also not that late to a party.</p>
+
+            <p>The optimal solution here seems to depend on the exact criteria we are trying to optimize for. Not being in the first x% of people and not being in the last y% of people, I think, will lead to a different outcome than the problem where you are trying to not be in the first x% of people but trying to maximize your time at the party (where the party time is fixed or somewhat fixed).</p>
+
+            <p>The former would lead you to end up coming in the middle of the party. You are going to think of the distributions of when people arrive and try to land in the middle. Others are doing this too, but there are some people who either have other engagements and need to come late/early or are generally early/late people, so some people have more fixed schedules on which they’ll arrive while others are going to try to jockey to land in the middle. But this leads to some middle-ish landing spot for most.</p>
+
+            <p>The latter example will lead to something middle-ish but closer to the earlier side since you are trying to maximize your time at the party rather than not trying to leave before others leave.</p>
+
+            <p>There are a lot of other constraints you can think of: not being the first x% of people but leaving 30 mins before the end (instead of a % of people), being in the first x% of people to get face time with whoever you want and then have no back constraints, etc. But I think the most common game will be: (not in first x%, not in last y%).</p>
+
+            <p>Our brains do a good job of evaluating this on the fly and deciding something somewhat optimal for this common scenario. I think the solution that we all come up with is texting a group of friends who you know are going and coming together with them. If you try to create your own group of x% of people to come with, then you will always not be in the first x% of people and then if x=y on the back end and you all leave together, then you end up winning that scenario too.</p>
+
+            <p>With closer friends, it’s also likely that the numbers for x and y drop somewhat since you’re more comfortable being in a smaller group if it is with your close friends instead of acquaintances.</p>
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
+
