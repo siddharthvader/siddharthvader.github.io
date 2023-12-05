@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blog posts and musings written by Siddharth Ramakrishnan; SF, Columbia, Attentive">
+    <title>Siddharth Ramakrishnan - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Blog</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Translation as a Service (TaaS)</h3>
+
+            <p>December 4, 2023</p>
+
+            <p>People have been talking about real time spoken translation, and <a href="https://support.google.com/pixelphone/answer/11209263?hl=en">Google even tried to integrate it with their Pixel</a>. The potential here is amazing, and envisioning it feels like the future, but we haven't even solved the simpler problem of real time translation on the internet yet.</p>
+            <p>So, picture this: a product that translates your website into multiple languages in real-time; a website with no internationalization, but seamlessly accessible to a global audience. Yes, it's less sexy than getting dropped in Barcelona and being able to understand everything people are saying in your native English, but it's a step in the right direction!</p>
+
+            <p>Imagine a visitor from Spain accessing your English website. The product has an API that recives the site's content, translates it into Spanish, and serves it to the user. This translation is cached, so the next Spanish-speaking visitor sees this cached version, ensuring a swift and seamless browsing experience.</p>
+
+            <p>Now this product isn't a silver bullet. For example, caching significantly reduces the number of API calls, cutting down costs and improving speed but, managing this cache is a complex task. Content updates need to be reflected in the cache, requiring a robust system to track changes and update translations accordingly. The initial user who triggers a translation also will get the world's slowest page load (or you need to tell them to come back later).</p>
+
+            <p>Costs are another crucial factor. OpenAI's API calls can rack up significant charges, especially for content-heavy sites or those with high traffic. Balancing the usage to stay within budget without compromising on user experience is a delicate dance.</p>
+
+            <p>This concept isn't just about incrementally moving towards seamless spoken translation; it's useful to organizations today. Non-profits like Open Philanthropy and EFF, who operate on a global scale, have asks out for translators into all of the world's languages. Instant translation means reaching a wider audience, spreading their message, and making a bigger impact.</p>
+
+            <p><a href="dalle.html">Similar to how photography didn't spell the end for painters</a>, this product isn't about replacing all human translators. It's about augmenting our capabilities, offering a stopgap solution while seeking more nuanced translations. It's about leveraging technology to build bridges where there were walls.</p>
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
+
