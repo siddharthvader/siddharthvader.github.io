@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Every decision feels like a mini-death - a loss of countless potential futures. Why do choices cause this pain and how can we cope with it? Explore the concept of simulated futures and the sacrifice required for progress.">
+    <title>Staring at the Sun</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Blog</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Gone Phishing</h3>
+
+            <p>December 7, 2023</p>
+
+            <p><a href="https://slashnext.com/state-of-phishing-2023/">The SlashNext: The State of Phishing Report 2023</a> paints a stark picture, revealing a staggering 1265% increase in malicious emails since the launch of ChatGPT alone. SlashNext investigates a phishing tool called "WormGPT" which utilizes "jailbreak" prompts for ChatGPT to get the AI to help with cybercrime, despite OpenAI's safety team <a href="https://openai.com/safety">(link)</a> trying to prevent this kind of behavior.</p>
+            
+            <p>This problem provides an opportunity to fight fire with fire: LLMs have the potential to revolutionize the way we combat phishing, safeguarding individuals and businesses from this ever-evolving threat. LLMs, trained on vast amounts of text data, possess a remarkable ability to understand language nuances and patterns. This makes them uniquely suited to identify the subtle clues that distinguish legitimate emails from fraudulent ones.</p>
+            
+            <p><a href="https://www.ycombinator.com/blog/your-whole-goal-is-to-not-quit-courtland-allen-of-indie-hackers/">This article from Indie Hackers</a>, highlights how LLMs can be used to automate spam generation and detection. Phishing is just another kind of spam, so we can extend this kind of LLM based spam filter to also detect malicious emails. By analyzing the content of emails, LLMs can detect phishing attempts based on factors such as:</p>
+            
+            <ol>
+              <li>Unusual grammar and syntax: Phishing emails are often riddled with grammatical errors, clunky phrasing, and unnatural sentence structures that can be readily identified by LLMs.</li>
+              <li>Suspicious sender names and addresses: LLMs can recognize discrepancies between the email's sender and their claimed identity, flagging potential forgeries.</li>
+              <li>Urgency and pressure tactics: Phishing emails frequently employ language designed to create a sense of urgency or panic, forcing the recipient into hasty action. LLMs can identify such manipulative language and raise red flags.</li>
+              <li>Links and attachments: LLMs can analyze the URLs embedded in emails and identify malicious links that lead to phishing websites. They can also scan attachments for suspicious code or malware signatures.</li>
+            </ol>
+            
+            <p>However, the fight against phishing is an arms race. Phishers are constantly adapting their methods, making it difficult to apply the same techniques to catch new phising emails. This necessitates a few extra considerations:</p>
+            
+            <ol>
+              <li>Advanced link and static analysis: In conjunction with LLM detection, the system could leverage additional analysis techniques like link checking and static code analysis to further corroborate the LLM's findings and provide a more robust defense. We can even have the LLM ingest the HTML of the page to determine if the linked site is malicious or abnormal.</li>
+              <li>Live Phishing Email Repository: We can have our LLMs sit on top of (or fine tuned on) a set of phishing emails that is constantly being updated as the tool identifies new malicious content. This will keep the LLM up to date with the latest tactics employed by cybercriminals as they change the language and structure of their emails to avoid detection.</li>
+            </ol>
+            
+            <p>By combining the power of LLMs with advanced analysis techniques, we can create new, anti-phishing tools capable of protecting everyone online.</p>            
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
