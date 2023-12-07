@@ -44,19 +44,15 @@
             
             <p><a href="https://www.ycombinator.com/blog/your-whole-goal-is-to-not-quit-courtland-allen-of-indie-hackers/">This article from Indie Hackers</a>, highlights how LLMs can be used to automate spam generation and detection. Phishing is just another kind of spam, so we can extend this kind of LLM based spam filter to also detect malicious emails. By analyzing the content of emails, LLMs can detect phishing attempts based on factors such as:</p>
             
-            <ul>
-              <li>Unusual grammar and syntax: Phishing emails are often riddled with grammatical errors, clunky phrasing, and unnatural sentence structures that can be readily identified by LLMs.</li>
-              <li>Suspicious sender names and addresses: LLMs can recognize discrepancies between the email's sender and their claimed identity, flagging potential forgeries.</li>
-              <li>Urgency and pressure tactics: Phishing emails frequently employ language designed to create a sense of urgency or panic, forcing the recipient into hasty action. LLMs can identify such manipulative language and raise red flags.</li>
-              <li>Links and attachments: LLMs can analyze the URLs embedded in emails and identify malicious links that lead to phishing websites. They can also scan attachments for suspicious code or malware signatures.</li>
-            </ul>
+            <p>- Unusual grammar and syntax: Phishing emails are often riddled with grammatical errors, clunky phrasing, and unnatural sentence structures that can be readily identified by LLMs.</p>
+            <p>- Suspicious sender names and addresses: LLMs can recognize discrepancies between the email's sender and their claimed identity, flagging potential forgeries.</p>
+            <p>- Urgency and pressure tactics: Phishing emails frequently employ language designed to create a sense of urgency or panic, forcing the recipient into hasty action. LLMs can identify such manipulative language and raise red flags.</p>
+            <p>- Links and attachments: LLMs can analyze the URLs embedded in emails and identify malicious links that lead to phishing websites. They can also scan attachments for suspicious code or malware signatures.</p>
             
             <p>However, the fight against phishing is an arms race. Phishers are constantly adapting their methods, making it difficult to apply the same techniques to catch new phising emails. This necessitates a few extra considerations:</p>
             
-            <ul>
-              <li>Advanced link and static analysis: In conjunction with LLM detection, the system could leverage additional analysis techniques like link checking and static code analysis to further corroborate the LLM's findings and provide a more robust defense. We can even have the LLM ingest the HTML of the page to determine if the linked site is malicious or abnormal.</li>
-              <li>Live Phishing Email Repository: We can have our LLMs sit on top of (or fine tuned on) a set of phishing emails that is constantly being updated as the tool identifies new malicious content. This will keep the LLM up to date with the latest tactics employed by cybercriminals as they change the language and structure of their emails to avoid detection.</li>
-            </ul>
+            <p>- Advanced link and static analysis: In conjunction with LLM detection, the system could leverage additional analysis techniques like link checking and static code analysis to further corroborate the LLM's findings and provide a more robust defense. We can even have the LLM ingest the HTML of the page to determine if the linked site is malicious or abnormal.</p>
+            <p>- Live Phishing Email Repository: We can have our LLMs sit on top of (or fine tuned on) a set of phishing emails that is constantly being updated as the tool identifies new malicious content. This will keep the LLM up to date with the latest tactics employed by cybercriminals as they change the language and structure of their emails to avoid detection.</p>
             
             <p>By combining the power of LLMs with advanced analysis techniques, we can create new, anti-phishing tools capable of protecting everyone online.</p>            
 
