@@ -105,6 +105,24 @@ ul li {
     margin-bottom: 0.5em; /* Space between list items */
 }
 
+/* Style for ordered lists */
+ol {
+    list-style-type: decimal; /* Default numerical styling for ordered list */
+    margin-left: 20px; /* Adds space to the left of the list */
+    margin-bottom: 1em; /* Space after the list */
+    padding-left: 0; /* Adjusts padding if needed */
+}
+
+ol li {
+    margin-bottom: 0.5em; /* Space between list items */
+}
+
+/* Style for links within ordered list items */
+ol li a {
+    font-weight: normal; /* Regular font weight for links */
+    color: #0077cc; /* A blue color for links, same as in other anchor tags */
+}
+
 a {
     text-decoration: underline; /* Adds an underline to all links */
 }
