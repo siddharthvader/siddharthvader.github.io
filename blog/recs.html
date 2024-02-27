@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discussing an innovative ML Recommendation Engine, this blog post explores a self-serve portal idea for companies to match their data with suitable ML features and models, guiding through implementation with code examples and better-suited tools than GPT-4 for specific tasks.">
+    <title>Next Top Model</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Blog</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Next Top Model</h3>
+
+            <p>December 12, 2023</p>
+
+            <p>Right now there's a lot of companies trying to use AI / ML, but there aren't enough talented ML engineers to go around yet to fulfill everyone's needs. An idea that could help a number these companies is some sort of recommendation engine for features and models.</p>
+            
+            <p>You could offer a self-serve portal where users describe what data they have, what problem they are trying to solve, and then the portal spits out what features and models they could use to address that problem. There can even be a module that shows the user any relevant code and documentation in python to walk the user through an example.</p>
+            
+            <p>This is targeting a kind of company that is looking to use ML more heavily but has not yet hired an ML engineer or data scientist yet. Ideal customers here are trying to better understand how they can use their data to solve their business problems, but don't have the bandwidth and expertise to actually make significant investments into AI / ML.</p>
+            
+            <p>This idea stemmed from the fact that many people are trying to use GPT-4 for tasks that aren't really suited for LLMs. People would be better off using a normal ML model, but they either don't have the expertise to build that kind of model or just don't know what tools are out there instead of GPT-4 to build a better (and more cost-effective) model.</p>
+            
+            <p>One example I saw was someone classifying bank transactions using GPT-4 to categorize them and then this category goes into some sort of fraud model which flags "bad" transactions. A proper classification model probably would have outperformed this, but sending some data to OpenAI and getting a response is much easier than building a bespoke model. This is why a portal that points users to better <a href="https://huggingface.co/models">huggingface models</a> with code / instructions that tell a user how to put everything together could help a customer get started with a model that can deliver better results.</p>
+            
+            <p>Ideally, in the long term this sort of service would be as easy as using OpenAI's API where you can just throw a bunch of your data at the service, describe what you are trying to solve, and then it'll spin up an endpoint just for you that serves a model that best fits your data and needs.</p>
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
