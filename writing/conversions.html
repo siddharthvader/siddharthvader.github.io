@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Discover how CoinList capitalized on DeFi summer by offering streamlined WBTC trading. Learn how rapid scaling and innovative strategies turned a simple product into a billion-dollar trading solution that attracted millions of users and market makers." />
+    <title>DeFi Summer and WBTC</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>DeFi Summer and WBTC</h3>
+
+            <p>It was early 2020, and we were seeing the beginnings of what would become DeFi summer in the crypto world. There was some excitement around a few different trading platforms, and Uniswap was gaining a lot of traction. I was voraciously consuming every piece of content (every tweet, every medium article, every podcast) on what was happening. While working on a few other projects at CoinList, I kept getting antsy and wondered why we couldn't make something happen on our platform that took advantage of this trend.</p>
+
+            <p>After brainstorming with some other CoinListas, we decided to focus on the WBTC market. We had a relationship with BitGo, which ran the WBTC consortium, and had engaged users on our platform who were interested in WBTC. So, we decided to move forward with that.</p>
+
+            <p>I hacked together a product that was pretty bare-bones: a basic trading frontend that allowed users to input how much WBTC they wanted if they had BTC in their wallet. In the first week, we didn't see much activity. We figured it was worth a shot, so I returned to my other projects. However, we continued to monitor the product, and we noticed sporadic increases in volume. By the summer of 2020, we saw it go completely bananas.</p>
+
+            <p>The product worked because we served as a distribution layer atop the usual WBTC minting process, which generally took days and was only available to those minting a large amount of WBTC at once. We would mint a significant amount of WBTC, keep it in a pool with BTC, and allow people to trade the pair while we made the market (and took a fee for the service).</p>
+
+            <p>When summer came around, we were frequently getting cleaned out of our WBTC as soon as we minted more. As a result, we had to scale up our processes, systems, and security to maintain more funds in the pool and replenish it quickly whenever we ran low.</p>
+
+            <p>Once we resolved most scaling issues (months later, as user numbers continued to rise), the product worked well for us. We became the leading distribution point for WBTC and achieved annual trading volumes in the billions for 2020, 2021, and 2022 with this product alone. We integrated this trading pair into our exchange, and it became our most popular pair by far.</p>
+
+            <p>We invested a lot into initially scaling this system. We streamlined the order process to minimize database writes and used queues for orders during peak times to prevent race conditions. When onboarding more market makers to the platform, we built assurances for them by developing an API where they could read the state of their orders, the pool, and their history.</p>
+
+            <p>This also helped us expand our brand beyond our core product, attracting market makers, crypto projects, and users to our platform through our WBTC services. Market makers wanted to trade this pair with us, which improved liquidity across all pairs. New crypto projects we supported asked if we could do something similar for their networks, and we onboarded millions of users with the WBTC product as their entry point.</p>
+
+            <p>This project taught me a lot because it showed me that I should always default to shipping something. What started as a small, hacky idea grew into a product that scaled to millions of users and significantly contributed to CoinList's growth in 2020 and 2021. You never know what might stick, so if you believe in something, the best approach is to put it out there and see what happens.</p>
+
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>

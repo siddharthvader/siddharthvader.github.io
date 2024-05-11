@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A deep dive into building a cloud service provider outage model at Cyence. Learn how subdomain clustering, Bayesian networks, and latent Dirichlet allocation were used to assess potential business interruptions for insurance coverage." />
+    <title>Subdomain Clustering</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Subdomain Clustering</h3>
+
+            <p>When I was at Cyence, one of the big areas of cyber insurance that companies wanted covered was cloud service provider downtime. This was 2017, so you were in that mid to late swing of cloud adoption where a bunch of older companies had switched over to the cloud, resulting in a lot of interest from those companies to ensure coverage if AWS went down and they couldn't operate their business. Given the high demand, we received numerous requests from our customers (insurance carriers) to create a cloud service provider (CSP) outage model and simulation to write policies covering CSP outages effectively.</p>
+
+            <p>This project was a significant effort involving around 10 people. We had to scrape data from WHOIS to identify which major cloud providers owned which IP blocks. Then, we mapped which domains of our clients were on these IP blocks and used a variation of our existing business interruption model to simulate what would happen if all the IP blocks associated with AWS US-East-1, for instance, went down.</p>
+
+            <p>One of the more exciting aspects of this project was a subdomain clustering problem. If a CSP outage affected a user's <code>www.</code> subdomain, it would be pretty serious. However, if only a <code>data.</code> subdomain were affected, the impact could be less severe. This impact depends on what the company actually does. For some B2B companies, accessing their internal data at <code>data.</code> might be more critical than their landing page at <code>www.</code>.</p>
+
+            <p>To tackle this clustering problem, I utilized Latent Dirichlet Allocation (LDA) (<a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">LDA</a>). Typically used in NLP, LDA clusters documents into topics based on word frequency. It employs a Bayesian network/graph approach to accomplish this. The method uses priors for the probability that a document belongs to a specific topic and priors for the probability that a word is in a specific document. These priors are iteratively updated based on word frequencies until reaching equilibrium.</p>
+
+            <p>In our subdomain clustering problem, the "topics" were industries, the "documents" were subdomains, and the "words" were traffic/usage (+ some other data). This approach helped us identify which subdomains were frequently used by specific industries, allowing us to model potential business interruptions a company might face during a CSP outage. The model was updated every time new company data was collected, ensuring accurate and up-to-date simulations.</p>
+
+            <p>I thoroughly enjoyed working on this project because it was fascinating to see how ML techniques from different fields (like NLP) could be adapted to address entirely different problems.</p>
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
