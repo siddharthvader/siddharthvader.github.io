@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore how Attentive leveraged LLMs to rapidly prototype a product recommendations model, significantly reducing development time from months to just a week. Learn about the benefits of iterative prototyping in conversational commerce." />
+    <title>Prototyping ML Models</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Prototyping ML Models</h3>
+
+            <p>May 10, 2024</p>
+
+             <p>I'm sitting at my desk downtown. It's a cold day in SF, and I'm watching some uncharacteristic, winter fog roll in while contemplating what to do after talking to our ML team at Attentive. I just got the word that there's still another 6-10 weeks of work to get our product recommendations model off the ground, which is unfortunate for me since I'm trying to get our conversational commerce product off the ground and this would be a big blocker.</p>
+
+            <p>We're sending text messages to people who have browsed some ecommerce site, and more than 50% of the people who respond to our messages are asking about products. We need to assess, based on their past behavior and attributes, if: the product they are asking about is the best for them (likely, but not always the case), what product to recommend if they either haven't looked at a product or if we think we have a better fit than what they looked at, and what about the products we should highlight to try and entice the customer.</p>
+
+            <p>Waiting 6-10 weeks is a tough pill to swallow here, so we make the not-so-tough decision to just not. I didn't expect to have such an easy out, but LLMs have done a great job of automating and speeding up the jobs of the people who made them. What would have taken 6-10 weeks for an ML engineer to crank out, we were able to crank out in like a week of work with just four pieces: user behavior data, a product catalog, a vector DB, and an LLM. Yup, we just hacked together a product recommendations model with RAG and saved months of time.</p>
+
+            <p>Now don't get me wrong, we're still going to wait on the final model to come in, but we were able to get like 80% of the way there with something much simpler since we have LLMs at our disposal. In the long run, that extra 20% of performance is going to be valuable, but what's more valuable now is being able to prototype models like these so quickly.</p>
+
+            <p>We started doing this too for other areas of our conversational commerce product. We're using LLMs to stand in as simple classification models for things like: what is the customer's intent (do they want to return something, get product information, etc.), how likely are they to buy something now, what kind of tone might be most effective for this user now.</p>
+
+            <p>We were also building a markov model / state machine model to determine what types of messages to send to users. We took in user behavior, what messages we've sent previously, what messages seemingly worked previously, and wanted to output what the next best message to send is. But what's easier than building a markov model is to throw all the data into an LLM with examples and have it output something reasonable. It's not perfect! But when trying to rapidly iterate, we don't need things to be perfect. Perfect is the enemy of the good, and definitely is the enemy of father time.</p>
+
+            <p><a href="recs.html">Pt. 2 linked here --&gt; ML model recommendations</a></p>
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
