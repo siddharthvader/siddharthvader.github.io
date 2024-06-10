@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Exploring the pivotal role of vector databases in managing multimodal data, including video and voice content. Discover how vector DBs, often underestimated, are becoming indispensable in efficiently serving diverse data types in an era dominated by AI advancements like GPT-4o." />
+    <title>Vector DBs 🤝 Multimodality</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Proof of Humanity</h3>
+
+            <p>June 9, 2024</p>
+
+            <p><i>This was taken from an email I sent on May 2, 2023</i></p>
+
+            <p>I’ve been thinking a bit more about the “proof of humanity” space since you brought it up. This article in particular made me further consider some of the applications of that kind of technology: <a href="https://www.wsj.com/articles/i-cloned-myself-with-ai-she-fooled-my-bank-and-my-family-356bd1a3">I cloned myself with AI, she fooled my bank and my family</a>.</p>
+
+            <p>“Proof of humanity” wouldn’t just help with verifying human-made digital content the way we usually think about it (i.e., public posts on social media) but also digital media more generally (like phone calls as this article discusses).</p>
+
+            <p>I decided to write up my thoughts and figured I’d share it with you since you’ve been curious about this stuff too!</p>
+
+            <p>The tl;dr is that there’s a good number of cool projects right now, but what I’m looking for and thinking about is a bundle of identity + reputation to really make a long-term impact in the space. (talked about more in the subsection that starts with "Farcaster")</p>
+
+            <h4>Current Space</h4>
+
+            <ul>
+                <li><h5>Content Authenticity Initiative (CAI) (<a href="https://contentauthenticity.org/">spearheaded by Adobe</a>)</h5>
+                    <ul>
+                        <li>Open source tooling that lets you “sign” content and add identity-based metadata. If your signature is corrupted, you can tell that the media was tampered with and therefore not the original.</li>
+                        <li>Can act as a kind of version control for digital content.</li>
+                        <li>CAI currently has a bunch of existing members in their consortium like Nikon, Canon, Adobe (obviously), the Associated Press, and more.</li>
+                        <li>Twitter is also a part of CAI so if you upload content through Twitter, it preserves the metadata.</li>
+                    </ul>
+                </li>
+                <li><h5>Worldcoin (<a href="https://worldcoin.org/">worldcoin.org</a>)</h5>
+                    <ul>
+                        <li>True “proof of personhood” by scanning your retinas.</li>
+                        <li>They issue you an ID (wallet/private key) + tokens for scanning your eyes and proving you are human (and allowing them to add your retina scan to their database as a unique record).</li>
+                    </ul>
+                </li>
+                <li><h5>OpenAI</h5>
+                    <ul>
+                        <li>They are working on tooling in their safety team that helps identify AI-generated content. So this can be used to flag and identify non-human content.</li>
+                        <li>It’s basically a model that can be run on any text (and my guess is video/images in the future) that can probabilistically tell if it was AI-generated.</li>
+                    </ul>
+                </li>
+                <li><h5>Crypto wallet-based identity</h5>
+                    <ul>
+                        <li>Services like Spruce and ENS are trying to provide digital identity/usernames.</li>
+                        <li>POAP and Disco.xyz are trying to provide verifiable credentials that can serve as proof of certain actions.</li>
+                        <li>For example, to get some POAPs you have to meet with someone in person and they can give you one as proof you met them at a conference.</li>
+                    </ul>
+                </li>
+                <li><h5>Farcaster / Lenster</h5> 
+                    <ul>
+                        <li>They are social platforms which use your wallet as your login (and therefore identity). This also acts as a kind of reputation system since it isn’t just verifying a key, but also links all the content you have posted to that key and therefore can “prove” that you are a good actor or that you are who you say you are. This is what I think is missing from the CAI initiative, so it would be cool to see these combined somehow. CAI + Farcaster + Disco / POAP seems like it’d provide a pretty robust identity + reputation bundle that can vouch for a particular human.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h4>Potential Future Players</h4>
+
+            <p>Apple and Google seem to be the players here that could enter the space at some point in the future. The WSJ article above made me think about this since Apple could use a chip protected in their secure enclave to sign any packets transmitted from the phone, and either by using CAI or something similar that they build in house can alert users when data is tampered. This means that your Apple ID becomes your de-facto online identity, but then Apple can help police content by providing SDKs that let applications check if data is tampered as well as functions that tie content back to their origination point (they’d have some repository of the pairs of (private keys, chips in phones) that can map signed content back to the phone that transmitted the data).</p>
+
+            <p>Google can basically do something similar here with android, and both Apple and Google can leverage their “Sign in with X” APIs which are already widely adopted to distribute these solutions.</p>
+
+            <p>I personally would like to see a future where this solution is not housed in a silo at Google or Apple, but they definitely could solve this problem either individually or together.</p>
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>

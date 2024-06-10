@@ -46,12 +46,42 @@ h1 {
     margin-bottom: 0.5em; /* Space after the title */
 }
 
-p {
-    margin-bottom: 1em; /* Space after paragraphs */
-    line-height: 1.6; /* More readable line spacing */
+h2 {
+    font-size: 1.5em; /* Slightly larger font size for section titles */
+    margin-bottom: 0.5em; /* Space after section titles */
+    margin-top: 1em; /* Space before section titles */
+    color: #333; /* Dark grey color for section titles */
 }
 
-a {
+h3 {
+    font-size: 1.2em; /* Smaller than h2, but larger than normal text */
+    margin-top: 1em; /* Space above h3 tags */
+    margin-bottom: 0.5em; /* Space below h3 tags */
+    color: #555; /* Slightly lighter than h2 for hierarchy */
+}
+
+h4 {
+    font-size: 1.1em; /* Smaller than h3 */
+    color: #666; /* Lighter grey to differentiate from h3 */
+    margin-top: 1em; /* Space above h4 tags */
+    margin-bottom: 0.5em; /* Space below h4 tags */
+}
+
+h5 {
+    font-size: 1em; /* Smaller than h4 */
+    color: #777; /* Even lighter grey for further differentiation */
+    margin-top: 1em; /* Space above h5 tags */
+    margin-bottom: 0.5em; /* Space below h5 tags */
+}
+
+p, li {
+    margin-bottom: 1em; /* Space after paragraphs and list items */
+    line-height: 1.6; /* More readable line spacing */
+    font-size: 1em; /* Consistent font size */
+    color: #333; /* Consistent text color */
+}
+
+a, a:hover {
     color: #0077cc; /* A blue color for links */
     text-decoration: none; /* No underline on links */
 }
@@ -60,7 +90,6 @@ a:hover {
     text-decoration: underline; /* Underline on hover for links */
 }
 
-/* Style for the navigation links */
 nav ul {
     list-style: none; /* No bullet points */
     margin-bottom: 2em; /* Space after the nav */
@@ -71,79 +100,35 @@ nav ul li {
     margin-right: 10px; /* Space between links */
 }
 
-/* Footer style */
 footer {
     font-size: 0.8em; /* Smaller font size for footer */
     text-align: center; /* Center align footer content */
     margin-top: 2em; /* Space before the footer */
 }
 
-/* Style for section titles */
-h2 {
-    font-size: 1.5em; /* Slightly larger font size for section titles */
-    margin-bottom: 0.5em; /* Space after section titles */
-    margin-top: 1em; /* Space before section titles */
-    color: #333; /* Dark grey color for section titles */
-}
-
-/* Style for smaller section titles or subtitles */
-h3 {
-    font-size: 1.2em; /* Smaller than h2, but larger than normal text */
-    margin-top: 1em; /* Space above h3 tags */
-    margin-bottom: 0.5em; /* Space below h3 tags */
-    color: #555; /* Slightly lighter than h2 for hierarchy */
-}
-
-
-/* Unstyled list for sections like 'Writing' */
-ul {
+ul, .featured-list {
     list-style: none; /* No bullet points for lists */
     margin-bottom: 1em; /* Space after lists */
 }
 
-ul li {
+ul li, .featured-list li {
     margin-bottom: 0.5em; /* Space between list items */
-}
-
-/* Style for ordered lists */
-ol {
-    list-style-type: decimal; /* Default numerical styling for ordered list */
-    margin-left: 20px; /* Adds space to the left of the list */
-    margin-bottom: 1em; /* Space after the list */
-    padding-left: 0; /* Adjusts padding if needed */
-}
-
-ol li {
-    margin-bottom: 0.5em; /* Space between list items */
-}
-
-/* Style for links within ordered list items */
-ol li a {
-    font-weight: normal; /* Regular font weight for links */
-    color: #0077cc; /* A blue color for links, same as in other anchor tags */
-}
-
-a {
-    text-decoration: underline; /* Adds an underline to all links */
 }
 
 .featured-list {
     font-size: 1.2em; /* Makes the text 20% larger than the base font size */
     list-style-type: disc; /* Adds bullets */
     margin-left: 20px; /* Adds space to the left of the list */
-    padding-left: 0; /* Adjusts padding if needed */
-}
-
-.featured-list li {
-    margin-bottom: 10px; /* Adds space between list items */
 }
 
 .featured-list li a {
     font-weight: bold; /* Makes the link text bold */
 }
 
-
-/* Minimalist email styling */
 .email {
     font-style: italic; /* Italic style for email */
+}
+
+i {
+    font-style: italic; /* Italic style for italicized text */
 }
