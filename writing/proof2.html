@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="An insightful post discussing the current space of the Content Authenticity Initiative (CAI) spearheaded by Adobe, focusing on identity and reputation in the digital content space.">
+    <title>Proof of Humanity</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Proof of Humanity Pt. 2</h3>
+
+            <p>September 10, 2024</p>
+
+            <p><a href="proof.html">Pt. 1 linked here --&gt; Proof of Humanity</a></p>
+
+            <p>Worldcoin solves the problem of proof of humanity, but has a lot of friction. There's also concerns about a company forever storing your biometric data which is a bit dystopian. Because of friction and privacy concerns, I don't think it's likely that Worldcoin wins.</p>
+
+            <p>I thought previously that Apple / Google could win here. They own the OS / devices so they can use the secure enclave to sign all content posted / transmitted over the web. They can also build protocols between their devices (like iMessage) that can decode the signatures and ensure it's coming from the right person.</p>
+
+            <p>Like if I call someone, Apple can sign packets in a certain way that can be decoded by the receiving phone and can therefore tell me that the call is from the device I expect it to be from. SIM swaps won't work here since you'd verify signatures from the secure enclave of the phone.</p>
+
+            <p>At a personal level, this would work (for the most part. I just got a new phone and it was kind of painful, and here you'd need some sort of hardware-based handoff of the keys to transfer identity).</p>
+
+            <p>But at an internet level, this doesn't work. How do I verify that someone on Twitter isn't a bot? Verifying some signature from a device can work, but there's enough videos online now of the phone farms in Asia that we know that it's not a foolproof plan. It makes it marginally harder to have a giant bot farm, but you can definitely still do it if you have the capital to buy a bunch of phones.</p>
+
+            <p>This then goes back to something I mentioned in pt. 1 and what USV mentioned <a href="https://x.com/usv/status/1801701596755071287">in one of their tweets</a>: humanity will be probabilistic. I think you'll still need the hardware-based signatures, but those keys should be publicly associated with all the content it's ever posted / other activity, and then people can build their own heuristics / algorithms to determine if a user is a real human, or if the identity is "human enough" for the purposes of their service.</p>
+
+            <p>Some non-human agents in the future might be really good at tweeting insightful tweets, so you don't want to block them, but Twitter will want to look at their history associated with their keys and determine if the account should be allowed to post.</p>
+
+            <p>Human vs non-human will matter a lot less in the future, but what will continue to be important is reputation. We'll need a way of "measuring" reputation for different accounts / devices, and different forums online may want to have different versions of these measures!</p>
+
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
