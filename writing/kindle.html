@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-535NJ7G4SL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-535NJ7G4SL');
+    </script>
+
+    <link rel="icon" type="image/gif" href="../favicon.gif">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A critique of Amazon's Kindle ad testing, discussing the use of AI for cover variants and the need for better QA to avoid consumer trust issues caused by misspelled and hallucinated words on ads.">
+    <title>Kindle AI Slop</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Siddharth Ramakrishnan</h1>
+        <h2>Writing</h2>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../writing.html">Writing</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h3>Kindle AI Slop</h3>
+
+            <p>September 20, 2024</p>
+
+            <p>I noticed today that the ads on the lock screen of my Kindle looked off. Upon closer inspection, there were clearly misspelled words. The title "The Mystery of the Missing Ice Cream Truck" was spelled with "trucck" and then the bottom right had a gold circle usually where some sort of scholastic medal (or something similar) goes. But when I squinted and tried to read it, it was complete gibberish.</p>
+
+            <p>Like not even actual words. Just AI slop characters masquerading as words.</p>
+
+            <p><a href="https://x.com/siddharthvader_/status/1822280042787065975">Look here for an example.</a></p>
+
+            <p>My fiancé also got an ad for the same book on her new Kindle with a different cover and different misspelled / hallucinated words!</p>
+
+            <p>Now I get what Amazon is trying to do. They're using a multi-armed bandit to display ads to users and see which variants convert best for different types of users (sounds familiar doesn't it?). And I'm fully supportive of this! I think we should be using AI for these exact cases. It'll help creators and businesses more effectively target their customers.</p>
+
+            <p>But Kindle really should have had better QA before releasing this out to the wild.</p>
+
+            <p>My guess is they just took the book cover and then asked Stable Diffusion (or another in-house Amazon model equivalent) to generate different kinds of covers with different vibes. But they should have known that text in images isn't a solved problem for any diffusion models. This has led to some bad results and honestly does erode trust a bit in consumers (like me who thought the book was fake, and for authors who are going to get 0 conversions for their ads because they look fake).</p>
+
+            <p>What Amazon should have done in my opinion:</p>
+
+            <ol>
+                <li>Stripped the book cover of the title and author</li>
+                <li>Had some image-to-image model generate 10-100 different variants of the stripped cover based on vibes they think might resonate (kid-focused, mystery-focused, bright, light read, etc.)</li>
+                <li>Take the stripped text from the original cover and either drop it in, or ask an LLM what font would go best with the new cover variant + vibe, and then generate some text in that font style to drop into the new image</li>
+                <li>Same as (3) but with the author name</li>
+                <li>Preserve any medals / awards / things the author wants to highlight to drop in as is into the new variant</li>
+                <li>Definitely QA this a bunch of times before releasing it to the public.</li>
+            </ol>
+
+            <p>You also can have a vision model pick out words in the final image and see if they match what you're expecting. If there are typos or words not in an allowed list, you can flag / delete that variant.</p>
+
+            <p>These ads aren't and don't need to be real-time, so we can actually QA everything in bulk. Generate 1000 variants, then run all the QA on each, then only pass the final few and send those out to users.</p>
+
+            <p>I really wish Amazon would do better QA here since it gives AI a bad look and makes users lose trust in any future AI products which would actually be cool.</p>
+
+        </section>
+    </main>
+    <footer>
+        <!-- Add your footer here -->
+    </footer>
+</body>
+</html>
